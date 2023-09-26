@@ -8,20 +8,26 @@ package Programs;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Consumer;
+// import java.util.function.Consumer;
 
 public class OddEven {
     public static void main(String[] args) throws Exception {
 
         List<Integer> numbers = Arrays.asList(3,5,8,2,10,9);
-        Consumer<Integer> operation = i -> {
-            if(i%2 == 0) {
-                System.out.println(String.valueOf(i).concat("E"));
-            } else {
-                System.out.println(String.valueOf(i).concat("O"));
-            }
-        };
+        // Consumer<Integer> operation = i -> {
+        //     if(i%2 == 0) {
+        //         System.out.println(String.valueOf(i).concat("E"));
+        //     } else {
+        //         System.out.println(String.valueOf(i).concat("O"));
+        //     }
+        // };
 
-        numbers.stream().forEach(operation);
+        numbers.stream().forEach((num) -> {
+            if(num%2 == 0) {
+                System.out.println(String.valueOf(num).concat("E"));
+            } else {
+                System.out.println(String.valueOf(num).concat("O"));
+            }
+        });
     }
 }
